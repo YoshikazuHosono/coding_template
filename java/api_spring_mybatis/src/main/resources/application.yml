@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://0.0.0.0:3306/DB
+    username: username
+    password: password
+
+server:
+  port: 8080
+  ssl:
+    key-store: classpath:mykeystore.p12
+    key-store-password: password
+    keyStoreType: PKCS12
+    keyAlias: alias
+
+mybatis:
+  mapperLocations: classpath*:/mapper_xml/*.xml
+  configuration:
+    mapUnderscoreToCamelCase: true
